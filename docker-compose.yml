@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  back-service:
+    image: antoninchevalier/antoninchevalier-esilv-docker:latest
+    ports:
+      - "5000:5000"
+    environment:
+      - CURRENT_ENVIRONMENT=DEV
+
+  front-service:
+    image: antoninchevalier/esilv-docker-front:latest
+    ports:
+      - "8083:80"
+    environment:
+      - TR_WS_BACK_URL=http://localhost:5000/
+
+volumes:
+  data-volume:
