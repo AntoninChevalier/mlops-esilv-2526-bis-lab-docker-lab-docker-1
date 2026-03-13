@@ -1,0 +1,3 @@
+docker stop lab-docker-front-container
+
+docker stop lab-docker-back-container

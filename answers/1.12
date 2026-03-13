@@ -1,0 +1,1 @@
+docker run --rm --name lab-docker-front-container -e TR_WS_BACK_URL="http://localhost:5000/" -p 8083:80 antoninchevalier/esilv-docker-front:latest
